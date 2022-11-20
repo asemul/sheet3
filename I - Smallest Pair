@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int test,i,j,k,e,cal,Min;
+   scanf("%d",&test);
+    for(k=1 ; k<=test ; k++)
+    {
+        scanf("%d",&e);
+        int a[e];
+        for(i=0 ; i<e ; i++)
+            scanf("%d",&a[i]);
+        for(i=0 ; i<e ; i++)
+        {
+            for(j=i+1 ; j<e ; j++)
+            {
+                cal=a[i]+a[j]+j-i;
+                if(i==0 && j==1)
+                    Min=cal;
+                else
+                {
+                    if(Min>cal)
+                        Min=cal;
+                }
+            }
+        }
+        printf("%d\n",Min);
+    }
+    return 0;
+}
