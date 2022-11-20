@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int test,i;
+    scanf("%d",&test);
+    int a[test];
+    for(i=0 ; i<test ; i++)
+    {
+       scanf("%d",&a[i]);
+        if(a[i]>0)
+        printf("1 ");
+        else if(a[i]<0)
+       printf("2 ");
+        else
+           printf("0 ");
+    }
+}
